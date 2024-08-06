@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Código de Barras EAN13</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="styles_Barcode.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="barcodeForm">
+
+            <h1>Generar Código de Barras EAN13</h1>
+            <label for="country">Código del País (3 dígitos):</label>
+            <input type="text" id="country" name="country" maxlength="3" required>
+            
+            <label for="company">Código de la Empresa (4 dígitos):</label>
+            <input type="text" id="company" name="company" maxlength="4" required>
+            
+            <label for="item">Código del Artículo (5 dígitos):</label>
+            <input type="text" id="item" name="item" maxlength="5" required>
+            
+            <button type="button" id="generateBtn">Generar Código de Barras</button>
+
+        </form>
+        
+        <div id="barcode-container">
+
+            <svg id="barcode"></svg>
+            <button type="button" id="downloadBtn" class="download-btn">Descargar Código de Barras</button>
+
+        </div>
+
+    </div>
+    
+    <script src="script_Barcode.js"></script>
+</body>
+</html>
